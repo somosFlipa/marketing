@@ -1,0 +1,822 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-image: url('../assets/fondo.svg');
+    background-size: cover;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Poppins:wght@300;400;600;700&display=swap');
+
+@mixin headline1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    color: #0F172A;
+}
+@mixin buttonInactive{
+    padding: 16px 30px;
+    background: #FFFFFF;
+    border: 2px solid #22262B;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0F172A;
+}
+@mixin buttonActive{
+
+    background: #FAD725;
+    border-radius: 5px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0F172A;
+    border: none;
+}
+.button_active{
+    @include buttonActive();
+    padding: 16px 30px;
+}
+.button_inactive{
+    @include buttonInactive();
+}
+h1{
+    @include headline1();
+    margin-right: 10%;
+}
+a{
+    text-decoration: none;
+    color: #22262B;
+}
+@media screen and (max-width:767px){
+    .body_home__general{
+        overflow-x: hidden;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: "a a a a "
+        "b b b b"
+        ;
+        padding: 0 16px 0 16px;
+        column-gap: 16px;
+        justify-items: center;
+        .body_home__general-hero{
+            grid-area: a;
+            .hero_nav__contenedor{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 16px 0px;
+                .nav_contenedor__logo{
+                    a{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 32px;
+                        line-height: 40px;
+                    }
+                }
+                .nav_contenedor__sections{
+                    display: none;
+                    
+                }
+                .nav_contenedor__input{
+                    display: none;
+                    gap:16px;
+                }
+            }
+            .hero_header__contenedor{
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+                margin-top: 50px;
+                .header_contenedor__texto{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                    h1{
+                        font-size: 40px;
+                        line-height: 45px;
+                        margin-right: 0;
+                    }
+                    h2{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #0F172A;
+                    }
+                    button{
+                        width: 165px;
+                        height: 56px;
+                    }
+
+                }
+                img{
+                    width: 100%;
+                }
+            }
+        }
+        .body_home__general-main{
+            grid-area: b;
+            padding: 24px 16px;
+            .main_section__cards{
+                display: flex;
+                flex-direction: column;
+                gap:16px;
+                align-items: center;
+                .cards_card__body{
+                    height: 288px;
+                    background: #FFFFFF;
+                    border-radius: 5px;
+                    width: 300px;
+                    .cards_card__contenido{
+                        display: flex;
+                        flex-direction: column;
+                        gap:30px;
+                        padding: 16px;
+                        .card_contenido__titulo{
+                            display: flex;
+                            gap: 14px;
+                            align-items: center;
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 24px;
+                            img{
+                                width: 80px;
+                            }
+                        }
+                        .card_contenido__texto{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #8D8D8D;
+                            .texto_IMG{
+                                text-align: end;
+                                margin-top: 3em;
+                            }
+                        }
+                    }
+                }
+    
+            }
+            .main_section__numbers{
+                display: flex;
+                flex-direction: column;
+                gap: 26px;
+                justify-content: center;
+                align-items: center;
+                padding: 50px 0;
+                .numbers_data{
+                    width: fit-content;
+                    height: 200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .data_texto{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        h4{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 96px;
+                            line-height: 104px;
+                            color: #0F172A;
+                            text-align: center;
+                        }
+                        p{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 24px;
+                            text-align: center;
+                            color: #0F172A;
+                        }
+                    }
+                }
+                .numbers_data--texto{
+                    width: 310.5px;
+                    height: 200px;
+                    display: flex;
+                    align-items: center;
+                    p{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-align: start;
+                        color: #0F172A;
+                    }
+                }
+            }
+            .main_section__testimonios{
+                .testimonios_contenedor{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-self: center;
+                    align-items: center;
+                    justify-content: center;
+                    gap:24px;
+                    padding: 16px;
+                    .contenedor_testimonio__carrusel{
+                        background: #FFFFFF;
+                        border-radius: 5px;
+                        width: 300px;
+                        text-align: center;
+                        .carrusel_IMG{
+                            display: none;
+                        }
+                        .carrusel_texto{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+                            padding: 16px;
+                            .texto_testimonio{
+                                display: flex;
+                                p{
+                                    font-family: 'Poppins';
+                                    font-style: normal;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                    color: #0F172A;
+                                }
+                                img{
+                                    width: 43px;
+                                    margin-top: -38px;
+                                }
+                                .comillas-cierre{
+                                    width: 24px;
+                                    margin-top: 70px;
+                                }
+                            }
+                            .texto_nombre{
+                                display: flex;
+                                flex-direction: column;
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                line-height: 24px;
+                                color: #0F172A;
+                                gap:5px;
+                                .nombre{
+                                    font-size: 18px;
+                                    font-weight: 600;
+                                    
+                                }
+                                .cargo{
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                    .contenedor_testimonio__texto{
+                        width: 80%;
+                        text-align: center;
+                        h4{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 36px;
+                            line-height: 40px;
+                            color: #0F172A;
+                        }
+                        p{
+                            display: none;
+                        }
+                        button{
+                            margin-top: 24px;
+                        }
+                    }
+                }
+    
+            }
+            .main_section__servicios{
+                .servicios_titulo{
+                    display: none;
+                }
+                .servicios_cards__contenedor{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    padding:36px 16px;
+                    align-items: center;
+
+                    .cards_contenedor_card{
+                        height: 380px;
+                        background: #FFFFFF;
+                        border-radius: 5px;
+                        width: 300px;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        .card_IMG{
+                            text-align: center;
+                            margin-top: 16px;
+                        }
+                        .card_texto{
+                            margin-left: 16px;
+                            h5{
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 600;
+                                font-size: 18px;
+                                line-height: 24px;
+                            }
+                            p{
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #8D8D8D;
+                            }
+                        }
+                        .card_precio{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 700;
+                            font-size: 48px;
+                            line-height: 60px;
+                            color: #0F172A;
+                            text-align: center;
+                        }
+                        .card_button{
+                            text-align: end;
+                            margin-right: 16px;
+                        }
+                    }
+                }
+            }
+            .main_section__newsletter{
+                text-align: -webkit-center;
+                .newsletter_contenedor{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+                    width: 90%;
+                    background: rgba(34, 38, 43, 0.05);
+                    border-radius: 5px;
+                    padding: 24px 0;
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    color: #0F172A;
+                    h4{
+
+                        font-weight: 700;
+                        font-size: 36px;
+                        line-height: 60px;
+ 
+                    }
+                    p{
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        margin: 0 16px;
+                    }
+                    .contenedor_input{
+                        background: #fff;
+                        align-self: center;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 5px;
+                        width: 90%;
+                        input{
+                            border: none;
+                            padding-left: 5px;
+                        }
+                        button{
+                            @include buttonActive();
+                        }
+                    }
+                }
+            }
+        }
+    
+    }    
+    
+}
+// desktop
+@media (min-width:768px){
+
+.body_home__general{
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: "a a a a a a a a a a a a"
+    "b b b b b b b b b b b b"
+    ;
+    padding: 0 60px 0 60px;
+    column-gap: 24px;
+    justify-items: center;
+    .body_home__general-hero{
+        grid-area: a;
+        .hero_nav__contenedor{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 0px;
+            .nav_contenedor__logo{
+                a{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 600;
+                    font-size: 32px;
+                    line-height: 40px;
+                }
+            }
+            .nav_contenedor__sections{
+                display: flex;
+                gap: 48px;
+                a{
+                 font-family: 'Poppins';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 24px;   
+                }
+                
+            }
+            .nav_contenedor__input{
+                display: flex;
+                gap:16px;
+                .button_active{
+                    @include buttonActive();
+
+                }
+                .button_inactive{
+                    width: 56px;
+                    height: 56px;
+                    display: flex;
+                    place-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .hero_header__contenedor{
+            display: flex;
+            flex-direction: row;
+            gap: 24px;
+            align-items: center;
+            .header_contenedor__texto{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                h2{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #0F172A;
+                }
+                button{
+                    width: 165px;
+                    height: 56px;
+                }
+            }
+        }
+    }
+    .body_home__general-main{
+        grid-area: b;
+        .main_section__cards{
+            padding: 56px 60px;
+            display: flex;
+            flex-direction: row;
+            gap:24px;
+            .cards_card__body{
+                width: 424px;
+                height: 288px;
+                .cards_card__contenido{
+                    display: flex;
+                    flex-direction: column;
+                    padding: 32px;
+                    gap: 16px;
+
+                    background: #FFFFFF;
+                    border-radius: 5px;
+                    .card_contenido__titulo{
+                        display: flex;
+                        gap: 14px;
+                        align-items: center;
+                        h3{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 24px;
+                            color: #0F172A;
+                        }
+
+                    }
+                    .card_contenido__texto{
+                        margin-top: 12px;
+                        p{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #8D8D8D;
+                            margin-right: 13%;
+                        }      
+                        .texto_IMG{
+                            margin-top: 16px;
+                            width: 100%;
+                            display: flex;
+                            justify-content: end;
+                        }              
+                    }
+                }                
+            }
+
+        }
+        .main_section__numbers{
+            display: flex;
+            gap: 26px;
+            justify-content: center;
+            .numbers_data{
+                width: 310.5px;
+                height: 400px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .data_texto{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 24px;
+                    h4{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 96px;
+                        line-height: 104px;
+                        color: #0F172A;
+                        text-align: center;
+                    }
+                    p{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-align: center;
+                        color: #0F172A;
+                    }
+                }
+            }
+            .numbers_data--texto{
+                width: 310.5px;
+                height: 400px;
+                display: flex;
+                align-items: center;
+                p{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: start;
+                    color: #0F172A;
+                }
+            }
+        }
+        .main_section__testimonios{
+            display: grid;
+            justify-content: center;
+            padding: 52.5px 60px;
+            .testimonios_contenedor{
+                display: flex;
+                gap: 49px;
+                .contenedor_testimonio__carrusel{
+
+                    align-items: center;
+                    width: 734px;
+                    height: 499px;
+                    background: #FFFFFF;
+                    border-radius: 5px;
+                    display: flex;
+                    .carrusel_texto{
+                        display: flex;
+                        flex-direction: column;
+                        gap: 24px;
+                        .texto_testimonio{
+                            display: flex;
+                            gap: 16px;
+                            p{
+                                width: 199px;
+                                height: 96px;                                
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-weight: 400;
+                                font-size: 16px;
+                                line-height: 24px;                                
+                                color: #0F172A;
+                            }                     
+                            img.comillas-cierre{
+                                margin-top: 13%;
+                            }       
+                        }
+                        .texto_nombre{
+                            display: flex;
+                            flex-direction: column;
+                            text-align: center;
+                            gap: 6px;
+                            span{
+                                font-family: 'Poppins';
+                                font-style: normal;
+                                font-size: 18px;
+                                line-height: 24px;
+                                color: #0F172A;
+                            }
+                            .nombre{
+                                font-weight: 600;
+                            }
+                            .cargo{
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                    .carrusel_IMG{
+                        padding: 48px 40.5px;
+                    }
+
+                }
+                .contenedor_testimonio__texto{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 40px;
+                    width: 536px;
+                    align-self: center;
+                    h4{
+                        @include headline1();
+                    }
+                    p{
+                        font-family: 'Poppins';
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #0F172A;
+                    }
+                    button{
+                        width: fit-content;
+                    }
+                }
+            }
+
+        }
+        .main_section__servicios{
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            padding:48px 60px;
+            .servicios_titulo{
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                width: 312px;
+                align-self: center;
+                h4{
+                    @include headline1();
+                }
+                p{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #0F172A;
+                }
+                button{
+                    width: fit-content;
+                }
+            }
+            .servicios_cards__contenedor{
+                gap: 24px;
+                display: flex;
+                padding: 20px 0;
+                .cards_contenedor_card{
+                    display: flex;
+                    flex-direction: column;
+                    gap:16px;
+                    width: 312px;
+                    height: 468px;
+                    place-items: center;
+                    background: #FFFFFF;
+                    border-radius: 5px;
+                    .card_IMG{
+                        padding-top: 16px;
+                        img{
+                            width:207.2px;
+                            height:129.94px;
+                        }
+                    }
+                    .card_texto{
+                        padding: 0 16px;
+                        gap: 12px;
+                        display: flex;
+                        flex-direction: column;
+                        h5{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 24px;
+                            color: #0F172A;
+                        }
+                        p{
+                            font-family: 'Poppins';
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #8D8D8D;
+                        }
+                    }
+                    .card_precio{
+                        h6{
+                            @include headline1();
+                        }
+                    }
+                    .card_button{
+                        width: 90%;
+                        display: grid;
+                        justify-content: end;
+                        margin: 0 16px;
+                        
+                    }
+                }
+            }
+        }
+        .main_section__newsletter{
+            padding: 48px 60px;
+            .newsletter_contenedor{
+                padding: 48px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 40px;
+                background: rgba(34, 38, 43, 0.05);
+                border-radius: 5px;
+                h4{
+                    @include headline1();
+                }
+                p{
+                    font-family: 'Poppins';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: #0F172A;
+                    width: 424px;
+                    height: 48px;
+                }
+                .contenedor_input{
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 4px 4px 4px 16px;
+                    gap: 32px;                    
+                    width: 423px;
+                    height: 64px;                    
+                    background: #FFFFFF;
+                    input{
+                        padding: 4px 4px 4px 16px;
+                        background: #FFFFFF;
+                        border: none;
+                    }
+                    button{
+                        @include buttonActive();
+                        width: 56px;
+                        height: 56px;
+                        display: flex;
+                        place-content: center;
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+
+}    
+}
